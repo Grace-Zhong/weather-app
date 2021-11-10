@@ -7,20 +7,31 @@ const Header = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
-      <Toolbar>
-        <Button>
-          <Link to='/'>
-            Home
-          </Link>
-        </Button>
-        <Button>
-          <Link to='/contact'>
-            Contact
-          </Link>
-        </Button>
-      </Toolbar>
-    </div>
+    <Toolbar
+      sx={{
+        backgroundColor: 'rgba(138, 138, 138, 0.2)'
+      }}
+    >
+      <Button
+        sx={{
+          fontSize: '23px'
+        }}
+      >
+        <Link to='/' className={classes.link}>
+          Home
+        </Link>
+      </Button>
+      <Button
+        sx={{
+          fontSize: '23px',
+          paddingLeft: '30px',
+        }}
+      >
+        <Link to='/contact' className={classes.link}>
+          Contact
+        </Link>
+      </Button>
+    </Toolbar>
   );
 };
 export default Header;

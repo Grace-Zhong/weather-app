@@ -1,7 +1,11 @@
 import { makeStyles, createStyles } from "@material-ui/styles";
 
 export default makeStyles(() => createStyles({
-  container: {
-    backgroundColor: '#ffebee',
+  bar: {
+    backgroundColor: 'rgba(138, 138, 138, 0.2)',
+  },
+  link: {
+    color: 'white',
+    textDecoration: 'none',
   }
 }));

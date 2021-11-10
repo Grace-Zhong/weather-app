@@ -1,12 +1,17 @@
 import { createTheme } from '@mui/material';
-import { purple } from '@mui/material/colors';
 
 export const theme = createTheme({
   palette: {
     primary: {
-      main: '#fefefa'
+      main: '#ffccbc',
+      light: '#ffffee',
+      dark: '#cb9b8c',
     },
-    secondary: purple
+    secondary: {
+      main: '#a5d6a7',
+      light: '#d7ffd9',
+      dark: '#75a478',
+    }
   },
   typography: {
     fontFamily: 'Quicksand',
