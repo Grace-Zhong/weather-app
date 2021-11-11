@@ -41,14 +41,20 @@ const Home = () => {
   const [city, setCity] = useState('Sydney');
 
   const fetchData = async () => {
-    const response = await fetchWeather('Adelaide');
+    const response = await fetchWeather(city);
     setWeatherData(response.data as IWeatherData);
-
   }
 
   useEffect(() => {
     fetchData();
   }, []);
+
+  const handleKeyPress = (event : React.KeyboardEvent<HTMLImageElement>) => {
+    if (event.key === 'Enter') {
+      console.log('abc');
+      fetchData();
+    }
+  }
 
   return (
     <Card
@@ -75,7 +81,7 @@ const Home = () => {
           }}
           onChange={e => setCity(e.target.value)}
           value={city}
-          // onKeyPress={getWeather}
+          onKeyPress={handleKeyPress}
         />
         <IconButton size="large">
           <SearchOutlinedIcon />
