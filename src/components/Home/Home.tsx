@@ -108,8 +108,9 @@ const Home = () => {
           (
             <div>
               <p>{weatherData.name}</p>
-              <p>{Math.round(weatherData.main.temp)}°F</p>
+              <img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="weather img"/>
               <p>{weatherData.weather[0].main}</p>
+              <p>{Math.round(weatherData.main.temp)}°F</p>
             </div>
           )}
       </Box>
