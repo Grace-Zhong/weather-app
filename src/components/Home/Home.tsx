@@ -10,11 +10,12 @@ const Home = () => {
   const [weatherData, setWeatherData] = useState([{}]);
   const [city, setCity] = useState('Sydney');
 
+  const fetchData = async () => {
+    const response = await fetchWeather('London');
+    console.log(response);
+  }
+  
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await fetchWeather('London');
-      console.log(response);
-    }
     fetchData();
   }, []);
 
