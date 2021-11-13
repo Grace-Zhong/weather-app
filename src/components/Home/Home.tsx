@@ -38,7 +38,7 @@ const Home = () => {
   let today = new Date().toLocaleDateString();
 
   const [weatherData, setWeatherData] = useState<IWeatherData>();
-  const [city, setCity] = useState('Sydney');
+  const [city, setCity] = useState('Adelaide');
 
   const fetchData = async () => {
     const response = await fetchWeather(city);
