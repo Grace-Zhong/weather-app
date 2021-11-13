@@ -31,6 +31,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test-c": "react-scripts test --coverage --colors --silent --watchAll=false",
     "eject": "react-scripts eject",
     "s3-deploy": "aws s3 sync build/ s3://weather-app-deployment --profile enricop89"
   },
