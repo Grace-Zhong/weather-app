@@ -96,7 +96,7 @@ const Home = () => {
             left: '340px'
           }}
         >
-          Date: {today}
+          {today}
         </Typography>
       </Box>
       <Box
